@@ -1,0 +1,10 @@
+^D:\COMPILER DESING LAB EL\ASM-VALIDATOR\BUILD\CMAKEFILES\8B11241387502C245957D8A785CACDFE\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/compiler desing lab el/asm-validator" "-BD:/compiler desing lab el/asm-validator/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/compiler desing lab el/asm-validator/build/AsmValidator.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

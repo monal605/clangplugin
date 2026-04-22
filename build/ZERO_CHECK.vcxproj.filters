@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\compiler desing lab el\asm-validator\build\CMakeFiles\8b11241387502c245957d8a785cacdfe\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{B56D9CE4-11DA-3D06-85CD-A6ABDFDFCB1F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
