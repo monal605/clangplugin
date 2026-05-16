@@ -7,7 +7,7 @@
 
 int add_asm(int a, int b) {
     int result;
-    asm("addl %1, %0"
+    asm("addl %k1, %k0"
         : "=r"(result)       // output: result in any register
         : "r"(a), "0"(b)     // inputs
         :                    // no clobbers needed — only operand regs used

@@ -33,7 +33,7 @@ echo
 run_validator() {
     local file="$1"
     if [ "$MODE" = "plugin" ]; then
-        clang -fplugin="$PLUGIN" -fsyntax-only "$file" 2>&1
+        clang --target=x86_64 -fplugin="$PLUGIN" -fsyntax-only "$file" 2>&1
     else
         "$STANDALONE_BIN" "$file" 2>&1
     fi
@@ -49,7 +49,7 @@ for f in tests/buggy_*.c; do
     [ -f "$f" ] || continue
     TOTAL=$((TOTAL + 1))
     echo "--- $f ---"
-    output=$(run_validator "$f")
+    output=$(run_validator "$f" 2>&1 || true)
     echo "$output"
     echo
 
@@ -73,7 +73,7 @@ for f in tests/correct_*.c; do
     [ -f "$f" ] || continue
     TOTAL=$((TOTAL + 1))
     echo "--- $f ---"
-    output=$(run_validator "$f")
+    output=$(run_validator "$f" 2>&1 || true)
     echo "$output"
     echo
 

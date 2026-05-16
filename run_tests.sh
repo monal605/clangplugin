@@ -24,7 +24,7 @@ echo
 for f in tests/buggy_*.c; do
     TOTAL=$((TOTAL+1))
     echo -n "Testing $f ... "
-    output=$(clang -fplugin=$PLUGIN -fsyntax-only "$f" 2>&1)
+    output=$(clang --target=x86_64 -fplugin=$PLUGIN -fsyntax-only "$f" 2>&1 || true)
     if echo "$output" | grep -qE "(error|warning): inline asm"; then
         echo "PASS (diagnostic emitted)"
     else
@@ -40,7 +40,7 @@ echo
 for f in tests/correct_*.c; do
     TOTAL=$((TOTAL+1))
     echo -n "Testing $f ... "
-    output=$(clang -fplugin=$PLUGIN -fsyntax-only "$f" 2>&1)
+    output=$(clang --target=x86_64 -fplugin=$PLUGIN -fsyntax-only "$f" 2>&1 || true)
     if echo "$output" | grep -qE "(error|warning): inline asm"; then
         echo "FAIL (false positive)"
         echo "  $output"
