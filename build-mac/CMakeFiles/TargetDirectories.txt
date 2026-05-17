@@ -1,0 +1,9 @@
+/Users/monal/Codes/clangplugin/build-mac/CMakeFiles/intrinsics_gen.dir
+/Users/monal/Codes/clangplugin/build-mac/CMakeFiles/vt_gen.dir
+/Users/monal/Codes/clangplugin/build-mac/CMakeFiles/omp_gen.dir
+/Users/monal/Codes/clangplugin/build-mac/CMakeFiles/acc_gen.dir
+/Users/monal/Codes/clangplugin/build-mac/CMakeFiles/target_parser_gen.dir
+/Users/monal/Codes/clangplugin/build-mac/CMakeFiles/clang-tablegen-targets.dir
+/Users/monal/Codes/clangplugin/build-mac/CMakeFiles/AsmValidator.dir
+/Users/monal/Codes/clangplugin/build-mac/CMakeFiles/edit_cache.dir
+/Users/monal/Codes/clangplugin/build-mac/CMakeFiles/rebuild_cache.dir

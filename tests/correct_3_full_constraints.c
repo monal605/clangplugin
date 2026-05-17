@@ -4,11 +4,11 @@
 // Modifies %rbx (callee-saved) by correctly saving and restoring it
 // with push/pop and also declaring it in the clobber list as a
 // belt-and-suspenders measure.
-void safe_rbx_use() {
+void safe_increment(int *x) {
     asm volatile(
-        "pushq %%rbx\n\t"      // save callee-saved register
-        "movq  $42, %%rbx\n\t"
-        "popq  %%rbx\n\t"      // restore — stack balanced
-        ::: "rbx"              // clobber declared
+        "incl %0"
+        : "+m"(*x)
+        :
+        : "memory"
     );
 }

@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/monal/Codes/clangplugin/build-mac/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

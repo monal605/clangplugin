@@ -5,12 +5,13 @@
 // No register is modified outside the constraint system.
 #include <stdio.h>
 
-int add_asm(int a, int b) {
-    int result;
-    asm("addl %k1, %k0"
-        : "=r"(result)       // output: result in any register
-        : "r"(a), "0"(b)     // inputs
-        :                    // no clobbers needed — only operand regs used
-    );
-    return result;
+int main() {
+    int x = 5;
+
+    asm("incl %0"
+        : "+r"(x)
+        :
+        : "cc");
+
+    return 0;
 }
